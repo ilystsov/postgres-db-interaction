@@ -1,22 +1,25 @@
-[build-system]
-requires = ["setuptools>=68.1"]
-build-backend = "setuptools.build_meta"
-
-[project]
-name = "homework_10"
-version = "0.0.1"
-authors = [
-  { name="Dmitry Kosarevsky", email="if@kosarevsky.ru" },
-]
-description = "A Tinkoff Python AB hw-10 package"
+[tool.poetry]
+name = "hw-10"
+version = "0.1.0"
+description = ""
+authors = ["ilya <lystsov.ilya@gmail.com>"]
+license = "MIT"
 readme = "README.md"
-requires-python = ">=3.12"
-classifiers = [
-    "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
-]
 
-[project.urls]
-"Homepage" = "https://github.com/central-university-dev/python-hw-10-template"
-"Bug Tracker" = "https://github.com/central-university-dev/python-hw-10-template/issues"
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[tool.poetry.group.dev.dependencies]
+psycopg2-binary = "^2.9.9"
+python-dotenv = "^1.0.0"
+faker = "^20.1.0"
+prettytable = "^3.9.0"
+flake8 = "^6.1.0"
+black = "^23.11.0"
+mypy = "^1.7.1"
+types-psycopg2 = "^2.9.21.17"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
